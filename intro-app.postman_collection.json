@@ -1,6 +1,6 @@
 {
   "info": {
-    "_postman_id": "c506a24b-828d-404b-befe-4f68dbdd7f3d",
+    "_postman_id": "6516fbf8-d4a4-4682-b7bd-a92be26c8cea",
     "name": "intro-app",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
     "_exporter_id": "20669993"
@@ -151,7 +151,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\n        \"companyName\": \"Quest Global\",\n        \"client\": \"Siemens\",\n        \"tech\": \"angular, java\",\n        \"joiningDate\": \"2022-08-25\",\n        \"lastWorkingDate\": \"2023-06-22\"\n    }",
+              "raw": "{\n        \"companyName\": \"Quest\",\n        \"client\": \"Siemens\",\n        \"tech\": \"angular, java\",\n        \"joiningDate\": \"2022-08-25\",\n        \"lastWorkingDate\": \"2023-06-22\"\n    }",
               "options": {
                 "raw": {
                   "language": "json"
@@ -180,7 +180,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\n        \"companyName\": \"Test\",\n        \"client\": \"Siemens\",\n        \"tech\": \"angular, java\",\n        \"joiningDate\": \"2022-08-25\",\n        \"lastWorkingDate\": \"2023-06-22\"\n    }",
+              "raw": "{\n        \"companyName\": \"quest quest\",\n        \"client\": \"Siemens\",\n        \"tech\": \"angular, java\",\n        \"joiningDate\": \"2022-08-25\",\n        \"lastWorkingDate\": \"2023-06-22\"\n    }",
               "options": {
                 "raw": {
                   "language": "json"
@@ -188,7 +188,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8080/api/experience?companyName=Test Yantra",
+              "raw": "http://localhost:8080/api/experience?companyName=Quest",
               "protocol": "http",
               "host": [
                 "localhost"
@@ -201,7 +201,7 @@
               "query": [
                 {
                   "key": "companyName",
-                  "value": "Test Yantra"
+                  "value": "Quest"
                 }
               ]
             }
@@ -214,7 +214,7 @@
             "method": "DELETE",
             "header": [],
             "url": {
-              "raw": "http://localhost:8080/api/experience?companyName=Test",
+              "raw": "http://localhost:8080/api/experience?companyName=quest quest",
               "protocol": "http",
               "host": [
                 "localhost"
@@ -227,7 +227,7 @@
               "query": [
                 {
                   "key": "companyName",
-                  "value": "Test"
+                  "value": "quest quest"
                 }
               ]
             }
@@ -238,7 +238,118 @@
     },
     {
       "name": "youtube",
-      "item": []
+      "item": [
+        {
+          "name": "get-all",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/youtube",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "youtube"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "create",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"title\": \"kudremuka\",\n    \"url\": \"https://www.=126s\",\n    \"description\": \"In this vidtrek\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/youtube",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "youtube"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"title\": \"kudremuka\",\n    \"url\": \"\",\n    \"description\": \"In this vidfafaaftrek\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/youtube?title=kudremuka",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "youtube"
+              ],
+              "query": [
+                {
+                  "key": "title",
+                  "value": "kudremuka"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/youtube?title=kudremuka",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "youtube"
+              ],
+              "query": [
+                {
+                  "key": "title",
+                  "value": "kudremuka"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
     }
   ]
 }
