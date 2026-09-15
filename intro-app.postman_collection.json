@@ -1,0 +1,244 @@
+{
+  "info": {
+    "_postman_id": "c506a24b-828d-404b-befe-4f68dbdd7f3d",
+    "name": "intro-app",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "20669993"
+  },
+  "item": [
+    {
+      "name": "about",
+      "item": [
+        {
+          "name": "create",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\":\"Appaji\",\n    \"bio\":\"Best Person\",\n    \"profileImageUrl\":\"/images/a.jpg\",\n    \"email\":\"faa@gmail.cm\",\n    \"linkedInUrl\":\"linnaf.com\",\n    \"gitHubUrl\":\"gi.om\",\n    \"youtubeChannel\":\"youube.com\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/about",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "about"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get-all",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/about",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "about"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/about?email=faa@gmail.cm",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "about"
+              ],
+              "query": [
+                {
+                  "key": "email",
+                  "value": "faa@gmail.cm"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\":\"appu\",\n    \"bio\":\"Best Best Person\",\n    \"email\":\"faa@gmail.cm\",\n    \"linkedInUrl\":\"linnaf.com\",\n    \"gitHubUrl\":\"git.om\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/about?email=faa@gmail.cm",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "about"
+              ],
+              "query": [
+                {
+                  "key": "email",
+                  "value": "faa@gmail.cm"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "youtube",
+      "item": [
+        {
+          "name": "get-all",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/experience",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "experience"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "create",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n        \"companyName\": \"Quest Global\",\n        \"client\": \"Siemens\",\n        \"tech\": \"angular, java\",\n        \"joiningDate\": \"2022-08-25\",\n        \"lastWorkingDate\": \"2023-06-22\"\n    }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/experience",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "experience"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n        \"companyName\": \"Test\",\n        \"client\": \"Siemens\",\n        \"tech\": \"angular, java\",\n        \"joiningDate\": \"2022-08-25\",\n        \"lastWorkingDate\": \"2023-06-22\"\n    }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/experience?companyName=Test Yantra",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "experience"
+              ],
+              "query": [
+                {
+                  "key": "companyName",
+                  "value": "Test Yantra"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/experience?companyName=Test",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "experience"
+              ],
+              "query": [
+                {
+                  "key": "companyName",
+                  "value": "Test"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "youtube",
+      "item": []
+    }
+  ]
+}
